@@ -4,3 +4,5 @@ function solution(year) {
 }
 
 console.log("hello");
+solution(2001);
+console.log("testtest");
