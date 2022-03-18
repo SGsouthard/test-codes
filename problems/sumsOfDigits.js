@@ -12,3 +12,48 @@ EXAMPLES
 
 */
 
+function digital_root(n) {
+    let num = n
+
+    // function to convert the given number to an array
+    function convertArray() {
+        let arrOfNumbers = [];
+        let numString = num.toString()
+        let stringArray = numString.split('')
+
+        stringArray.forEach(string => {
+            arrOfNumbers.push(Number(string));
+        });
+
+        return arrOfNumbers;
+    }
+
+    // actually converting the number to an array
+    let arrOfNumbers = convertArray(num);
+    console.log(arrOfNumbers);
+
+    // using reduce() to add together the numbers and get a sum
+    let reducer = (accumulator, current) => accumulator + current;
+    let sum = arrOfNumbers.reduce(reducer)
+
+    //function to check if the sum is the right length
+    function checkLength() {
+        if (sum.toString().length !== 1) {
+            num = sum
+            let newSum = convertArray(num);
+            sum = newSum.reduce(reducer);
+
+            checkLength(sum);            
+        }
+    }
+    // call the check function, it will loop until reduced to a single digit
+    checkLength(sum)
+    
+    // return the final sum
+    return sum;
+}
+
+
+console.log("answer should be 7", digital_root(16));
+console.log("answer should be 6", digital_root(942));
+console.log("answer should be 1", digital_root(67132));
