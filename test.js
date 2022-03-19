@@ -15,12 +15,12 @@ function isPangram(string){
 
     let numArr = []
 
-    for (i = 0; i < panString.length; i++) {
-        let y = panString.charCodeAt(i) - 96
+    for (x = 0; x < panString.length; x++) {
+        let y = panString.charCodeAt(x) - 96
         if (y < 0 || y > 26) {
             
         } else {
-            numArr.push(panString.charCodeAt(i) - 96)
+            numArr.push(panString.charCodeAt(x) - 96)
         } 
     }
 
@@ -29,16 +29,6 @@ function isPangram(string){
     } else {
         answer = false
     }
-
-    // answer = true
-
-    // for (i = 1; i < 26;) {
-    //     if (numArr.includes(i)) {  
-    //         i++
-    //     } else {
-    //         answer = false
-    //     }
-    // }
     
     return answer
 }
@@ -50,3 +40,5 @@ console.log("==============================================================")
 console.log(isPangram("She sells seashells down by the seashore."), "Should be False")
 console.log("==============================================================")
 console.log(isPangram("Two driven jocks help fax my big quiz.​"), "Should be True")
+console.log("==============================================================")
+console.log(isPangram("abcdefghijklmopqrstuvwxyz​"), "Should be False")
