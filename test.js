@@ -15,14 +15,16 @@ function isPangram(string){
 
     let numArr = []
 
-    for (x = 0; x < panString.length; x++) {
-        let y = panString.charCodeAt(x) - 96
+    for (i = 0; i < panString.length; i++) {
+        let y = panString.charCodeAt(i) - 96
         if (y < 0 || y > 26) {
             
         } else {
-            numArr.push(panString.charCodeAt(x) - 96)
+            numArr.push(panString.charCodeAt(i) - 96)
         } 
     }
+
+    console.log(numArr)
 
     if (numArr.includes(1 && 2 && 3 && 4 && 5 && 6 && 7 && 8 && 9 && 10 && 11 && 12 && 13 && 14 && 15 && 16 && 17 && 18 && 19 && 20 && 21 && 22 && 23 && 24 && 25 && 26)) {
         answer = true
