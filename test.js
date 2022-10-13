@@ -1,5 +1,7 @@
 function createPhoneNumber(numbers){
-    
+    let firstPart = ""
+    let secondPart = ""
+    let thirdPart = ""
     console.log(phoneNumber);
     return phoneNumber;
 }
