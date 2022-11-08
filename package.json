@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/SGsouthard/test-codes#readme",
   "dependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.20"
   }
 }
