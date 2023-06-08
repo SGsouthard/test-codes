@@ -1,14 +1,13 @@
-function solution(n) {
-    let num = Array.from(String(n), Number);
-    let sum = 0;
-    // console.log(num)
+function feast(beast, dish) {
+    //your function here
+      if (beast.charAt(0) === dish.charAt(0) && beast.charAt(-1) === dish.charAt(-1)) {
+        console.log(beast.charAt(0), dish(charAt(0), beast.charAt(-1), dish(charAt(1))))
+        return true
+      } else {
+    console.log(beast.charAt(0), dish(charAt(0), beast.charAt(-1), dish(charAt(1))))
+      return false}
+    }
 
-    num.forEach(item => {
-        sum += item;
-    });
-
-    // console.log(sum)
-    return sum;
-}
-
-console.log(solution(29));
+console.log(feast("great blue heron", "garlic naan"), true);
+console.log(feast("chickadee", "chocolate cake"), true);
+console.log(feast("brown bear", "bear claw"), false);
